@@ -185,12 +185,10 @@
           仅仅使用关键字<code>TODO</code>来突出待办事项，而不要用其他的诸如<code>@@</code>的一般格式。
         </p>
         <p>
-          Append a contact (username or mailing list) in parentheses
-          as with the format <code>TODO(contact)</code>.
+          可以在后面括号里加上联系人（用户名或者邮件列表），格式如<code>TODO(contact)</code>。
         </p>
         <p>
-          Append action items after a colon as in <code>TODO: action
-          item</code>.
+          在冒号后写上工作项，格式如<code>TODO: 工作项</code>。
         </p>
         
         <CODE_SNIPPET>
