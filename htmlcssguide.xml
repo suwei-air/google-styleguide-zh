@@ -207,25 +207,20 @@
     </STYLEPOINT>
   </CATEGORY>
 
-  <CATEGORY title="HTML Style Rules">
-    <STYLEPOINT title="Document Type">
+  <CATEGORY title="HTML格式规则">
+    <STYLEPOINT title="文档类型">
       <SUMMARY>
-        Use HTML5.
+        使用HTML5。
       </SUMMARY>
       <BODY>
         <p>
-          HTML5 (HTML syntax) is preferred for all HTML documents:
-          <code>&lt;!DOCTYPE html&gt;</code>.
+          HTML5（HTML语法）是所有HTML文档的首选：<code>&lt;!DOCTYPE html&gt;</code>.
         </p>
         <p>
-          (It’s recommended to use HTML, as <code>text/html</code>. Do not use
-          XHTML. XHTML, as <a href="http://hixie.ch/advocacy/xhtml"><code>application/xhtml+xml</code></a>,
-          lacks both browser and infrastructure support and offers
-          less room for optimization than HTML.)
+          （推荐使用HTML（<code>text/html</code>），而不要使用XHTML。XHTML（<a href="http://hixie.ch/advocacy/xhtml"><code>application/xhtml+xml</code></a>）缺乏浏览器和架构支持，而且相对HTML提供了较少的优化空间。
         </p>
         <p>
-          Although fine with HTML, do not close void elements, i.e. write
-          <code>&lt;br&gt;</code>, not <code>&lt;br /&gt;</code>.
+          虽然HTML支持这个写法，但最好不要闭合空元素。也就是说，应该写成<code>&lt;br&gt;</code>，而不是<code>&lt;br /&gt;</code>。
         </p>
       </BODY>
     </STYLEPOINT>
