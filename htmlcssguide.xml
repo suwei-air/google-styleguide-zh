@@ -224,19 +224,17 @@
         </p>
       </BODY>
     </STYLEPOINT>
-    <STYLEPOINT title="HTML Validity">
+    <STYLEPOINT title="HTML合法性校验">
       <SUMMARY>
-        Use valid HTML where possible.
+        尽可能地使用符合语法的HTML。
       </SUMMARY>
       <BODY>
         <p>
-          Use valid HTML code unless that is not possible due to
-          otherwise unattainable performance goals regarding file size.
+          使用符合语法的HTML代码，除非由于文件大小限制而无法实现。
         </p>
         
         <p>
-          Use tools such as the <a href="http://validator.w3.org/nu/">W3C
-          HTML validator</a> to test.
+          使用校验工具（如<a href="http://validator.w3.org/nu/">W3C HTML校验器</a>进行测试。
         </p>
         <p>
           Using valid HTML is a measurable baseline quality attribute
@@ -244,16 +242,16 @@
           and constraints, and that ensures proper HTML usage.
         </p>
         <BAD_CODE_SNIPPET>
-          &lt;!-- Not recommended --&gt;
-          &lt;title&gt;Test&lt;/title&gt;
-          &lt;article&gt;This is only a test.
+          &lt;!-- 不推荐 --&gt;
+          &lt;title&gt;测试&lt;/title&gt;
+          &lt;article&gt;这仅仅是个测试。
         </BAD_CODE_SNIPPET>
         <CODE_SNIPPET>
-          &lt;!-- Recommended --&gt;
+          &lt;!-- 推荐 --&gt;
           &lt;!DOCTYPE html&gt;
           &lt;meta charset="utf-8"&gt;
-          &lt;title&gt;Test&lt;/title&gt;
-          &lt;article&gt;This is only a test.&lt;/article&gt;
+          &lt;title&gt;测试&lt;/title&gt;
+          &lt;article&gt;这仅仅是个测试。&lt;/article&gt;
         </CODE_SNIPPET>
       </BODY>
     </STYLEPOINT>
