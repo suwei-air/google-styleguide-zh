@@ -255,28 +255,25 @@
         </CODE_SNIPPET>
       </BODY>
     </STYLEPOINT>
-    <STYLEPOINT title="Semantics">
+    <STYLEPOINT title="语义">
       <SUMMARY>
-        Use HTML according to its purpose.
+        根据适用情况使用对应HTML元素。
       </SUMMARY>
       <BODY>
         <p>
-          Use elements (sometimes incorrectly called “tags”) for what
-          they have been created for. For example, use heading
-          elements for headings, <code>p</code> elements for
-          paragraphs, <code>a</code> elements for anchors, etc.
+          在对应元素的设计场景下使用适当元素（有时被不恰当地称为“标签”）。
+          例如，在标题部分使用<code>heading</code>元素，在段落中使用<code>p</code>元素，在锚点使用<code>a</code>元素，如此等等。
         </p>
         <p>
-          Using HTML according to its purpose is important for
-          accessibility, reuse, and code efficiency reasons.
+          根据HTML的设计原意来使用标签，在可访问性、重用、代码效率上都有重要意义。
         </p>
         
         <BAD_CODE_SNIPPET>
-          &lt;!-- Not recommended --&gt;
+          &lt;!-- 不推荐 --&gt;
           &lt;div onclick="goToRecommendations();"&gt;All recommendations&lt;/div&gt;
         </BAD_CODE_SNIPPET>
         <CODE_SNIPPET>
-          &lt;!-- Recommended --&gt;
+          &lt;!-- 推荐 --&gt;
           &lt;a href="recommendations/"&gt;All recommendations&lt;/a&gt;
         </CODE_SNIPPET>
       </BODY>
