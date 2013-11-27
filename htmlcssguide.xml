@@ -605,51 +605,59 @@
         <p>
           Try to convey what an ID or class is about while being as
           brief as possible.
+          尽可能简要地表达出ID或者class的作用。
         </p>
         <p>
           Using ID and class names this way contributes to acceptable
           levels of understandability and code efficiency.
+          采用这样的ID和class命名方式，有助于兼顾代码的可读性和执行效率。
         </p>
         <BAD_CODE_SNIPPET>
-          /* Not recommended */
+          /* 推荐 */
           #navigation {}
           .atr {}
         </BAD_CODE_SNIPPET>
         <CODE_SNIPPET>
-          /* Recommended */
+          /* 不推荐 */
           #nav {}
           .author {}
         </CODE_SNIPPET>
       </BODY>
     </STYLEPOINT>
 
-    <STYLEPOINT title="Type Selectors">
+    <STYLEPOINT title="类型选择器">
       <SUMMARY>
         Avoid qualifying ID and class names with type selectors.
+        避免在类型选择器中陈列ID和class名称。
       </SUMMARY>
       <BODY>
-        <p>Unless necessary (for example with helper classes), do not
+        <p>
+          Unless necessary (for example with helper classes), do not
           use element names in conjunction with IDs or classes.
+          不要把元素名和ID或class连起来使用，除非是必要情况（如helper class）。
         </p>
         <p>
           Avoiding unnecessary ancestor selectors is useful for <a href="http://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/">performance
           reasons</a>.
+          避免不必要的祖先选择器有助于
+          <a href="http://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/">performance reasons</a>。
         </p>
         <BAD_CODE_SNIPPET>
-          /* Not recommended */
+          /* 不推荐 */
           ul#example {}
           div.error {}
         </BAD_CODE_SNIPPET>
         <CODE_SNIPPET>
-          /* Recommended */
+          /* 推荐 */
           #example {}
           .error {}
         </CODE_SNIPPET>
       </BODY>
     </STYLEPOINT>
-    <STYLEPOINT title="Shorthand Properties">
+    <STYLEPOINT title="缩写属性">
       <SUMMARY>
         Use shorthand properties where possible.
+        在可能的情况下使用缩写属性。
       </SUMMARY>
       <BODY>
         <p>
@@ -657,13 +665,16 @@
           properties (like <code>font</code>)
           that should be used whenever possible, even in cases where
           only one value is explicitly set.
+          CSS提供了许多<a href="http://www.w3.org/TR/CSS21/about.html#shorthand">缩写</a>属性（如<code>font</code>），
+          这些属性应该在可能的情况下多多采用，即使只明确设置了一个值。
         </p>
         <p>
           Using shorthand properties is useful for code efficiency and
           understandability.
+          使用缩写属性有助于代码效率和可读性。
         </p>
         <BAD_CODE_SNIPPET>
-          /* Not recommended */
+          /* 不推荐 */
           border-top-style: none;
           font-family: palatino, georgia, serif;
           font-size: 100%;
@@ -674,21 +685,23 @@
           padding-top: 0;
         </BAD_CODE_SNIPPET>
         <CODE_SNIPPET>
-          /* Recommended */
+          /* 推荐 */
           border-top: 0;
           font: 100%/1.6 palatino, georgia, serif;
           padding: 0 1em 2em;
         </CODE_SNIPPET>
       </BODY>
     </STYLEPOINT>
-    <STYLEPOINT title="0 and Units">
+    <STYLEPOINT title="0和单位">
       <SUMMARY>
         Omit unit specification after “0” values.
+        省略“0”值后面的单位。
       </SUMMARY>
       <BODY>
         <p>
           Do not use units after <code>0</code> values unless they are
           required.
+          除非有明确的要求，不要在<code>0</code>值后面添加单位。
         </p>
         <CODE_SNIPPET>
           margin: 0;
@@ -696,42 +709,47 @@
         </CODE_SNIPPET>
       </BODY>
     </STYLEPOINT>
-    <STYLEPOINT title="Leading 0s">
+    <STYLEPOINT title="前置0">
       <SUMMARY>
         Omit leading “0”s in values.
+        省略属性值中的前置“0”。
       </SUMMARY>
       <BODY>
         <p>
           Do not use put <code>0</code>s in front of values or lengths
           between -1 and 1.
+          在使用介于-1和1之间的属性值或者长度时，省略前置<code>0</code>。
         </p>
         <CODE_SNIPPET>
           font-size: .8em;
         </CODE_SNIPPET>
       </BODY>
     </STYLEPOINT>
-    <STYLEPOINT title="Hexadecimal Notation">
+    <STYLEPOINT title="十六进制表示法">
       <SUMMARY>
         Use 3 character hexadecimal notation where possible.
+        尽可能使用3个字符的十六进制表示法。
       </SUMMARY>
       <BODY>
         <p>
           For color values that permit it, 3 character hexadecimal
           notation is shorter and more succinct.
+          对于可以进行缩写的颜色值，3字符的十六进制表示法更短更简洁。
         </p>
         <BAD_CODE_SNIPPET>
-          /* Not recommended */
+          /* 不推荐 */
           color: #eebbcc;
         </BAD_CODE_SNIPPET>
         <CODE_SNIPPET>
-          /* Recommended */
+          /* 推荐 */
           color: #ebc;
         </CODE_SNIPPET>
       </BODY>
     </STYLEPOINT>
-    <STYLEPOINT title="Prefixes">
+    <STYLEPOINT title="前缀">
       <SUMMARY>
         Prefix selectors with an application-specific prefix (optional).
+        在选择器前添加标明应用的前缀（可选）。
       </SUMMARY>
       <BODY>
         <p>
@@ -739,6 +757,8 @@
           other projects or on external sites use prefixes (as
           namespaces) for ID and class names. Use short, unique
           identifiers followed by a dash.
+          在大项目中，或者需要嵌入其他项目的代码中，还是外部站点上，应该在ID和class名称前使用前缀（作为命名空间）。
+          使用简短的唯一的标识符，后面加上一个短横线。
         </p>
         
         
@@ -746,6 +766,7 @@
           Using namespaces helps preventing naming conflicts and can
           make maintenance easier, for example in search and replace
           operations.
+          使用命名空间有助于防止命名冲突，使得维护工作更简单，例如查找和替换操作。
         </p>
         <CODE_SNIPPET>
           .adw-help {} /* AdWords */
