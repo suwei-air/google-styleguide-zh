@@ -774,25 +774,27 @@
         </CODE_SNIPPET>
       </BODY>
     </STYLEPOINT>
-    <STYLEPOINT title="ID and Class Name Delimiters">
+    <STYLEPOINT title="ID和Class名称的分隔符">
       <SUMMARY>
         Separate words in ID and class names by a hyphen.
+        用连字符来分隔ID和class名称里面的单词。
       </SUMMARY>
       <BODY>
         <p>
           Do not concatenate words and abbreviations in selectors by
           any characters (including none at all) other than hyphens,
           in order to improve understanding and scannability.
+          除了连字符，不要把选择器的单词和缩写用其他任何字符（包括不使用分隔符）连起来。这样可以增进可理解性和可读性。
         </p>
         <BAD_CODE_SNIPPET>
-          /* Not recommended: does not separate the words “demo” and “image” */
+          /* 不推荐：未分隔单词“demo”与“image” */
           .demoimage {}
 
-          /* Not recommended: uses underscore instead of hyphen */
+          /* 不推荐：使用了下划线而不是连字符 */
           .error_status {}
         </BAD_CODE_SNIPPET>
         <CODE_SNIPPET>
-          /* Recommended */
+          /* 推荐 */
           #video-id {}
           .ads-sample {}
         </CODE_SNIPPET>
@@ -802,6 +804,7 @@
       <SUMMARY>
         Avoid user agent detection as well as CSS “hacks”—try a different
         approach first.
+        避免对用户代理（user agent）进行检测，也不要使用CSS“hacks”——有限尝试使用其他的解决方式。
       </SUMMARY>
       <BODY>
         <p>
@@ -815,6 +818,10 @@
           and making it easy to use detection and hacks means using
           detection and hacks more frequently—and more frequently
           is too frequently.
+          通过检测用户代理，或者通过特殊的CSS过滤器、解决方式、甚至hacks，来解决样式差别似乎很诱人。
+          两种解决方式都应该被当成实现和维持高效可管理代码库的最后手段。
+          换句话说，随意使用检测和hacks会长远地对项目造成伤害，因为项目总是倾向于采取最少阻力的方式进行。
+          也就是说，允许或者轻易使用检测和hacks意味着更频繁地用到检测与hacks——更频繁就意味着太过频繁。
         </p>
         
         
@@ -822,16 +829,18 @@
     </STYLEPOINT>
   </CATEGORY>
 
-  <CATEGORY title="CSS Formatting Rules">
-    <STYLEPOINT title="Declaration Order">
+  <CATEGORY title="CSS格式规则">
+    <STYLEPOINT title="声明顺序">
       <SUMMARY>
         Alphabetize declarations.
+        按字母顺序进行声明。
       </SUMMARY>
       <BODY>
         <p>
           Put declarations in alphabetical order in order to achieve
           consistent code in a way that is easy to remember and
           maintain.
+          
         </p>
         <p>
           Ignore vendor-specific prefixes for sorting purposes. However,
