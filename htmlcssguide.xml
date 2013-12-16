@@ -840,12 +840,14 @@
           Put declarations in alphabetical order in order to achieve
           consistent code in a way that is easy to remember and
           maintain.
-          
+          将声明按字母顺序排列，以获得便于记忆和维护的一致性代码。
         </p>
         <p>
           Ignore vendor-specific prefixes for sorting purposes. However,
           multiple vendor-specific prefixes for a certain CSS property should
           be kept sorted (e.g. -moz prefix comes before -webkit).
+          在排序试忽略特定厂商的前缀。然而，不同厂商前缀对应的同一个CSS属性，应该保持字母顺序排列
+          （如：-moz前缀应该排在-webkit前面）。
         </p>
         <CODE_SNIPPET>
           background: fuchsia;
@@ -859,15 +861,18 @@
         </CODE_SNIPPET>
       </BODY>
     </STYLEPOINT>
-    <STYLEPOINT title="Block Content Indentation">
+    <STYLEPOINT title="块状内容缩进">
       <SUMMARY>
         Indent all block content.
+        缩进所有块状内容。
       </SUMMARY>
       <BODY>
         <p>
           Indent all <a href="http://www.w3.org/TR/CSS21/syndata.html#block">block
           content</a>, that is rules within rules as well as declarations, so to
           reflect hierarchy and improve understanding.
+          缩进所有<a href="http://www.w3.org/TR/CSS21/syndata.html#block">块状内容</a>，以展现层次和便于理解。
+          这和声明类似，是规则中的规则。
         </p>
         <CODE_SNIPPET>
           @media screen, projection {
@@ -881,24 +886,26 @@
         </CODE_SNIPPET>
       </BODY>
     </STYLEPOINT>
-    <STYLEPOINT title="Declaration Stops">
+    <STYLEPOINT title="声明的结束">
       <SUMMARY>
         Use a semicolon after every declaration.
+        在每个声明后写上分号。
       </SUMMARY>
       <BODY>
         <p>
           End every declaration with a semicolon for consistency and
           extensibility reasons.
+          为了一致性和扩展性，确保每个声明都以分号结束。
         </p>
         <BAD_CODE_SNIPPET>
-          /* Not recommended */
+          /* 不推荐 */
           .test {
             display: block;
             height: 100px
           }
         </BAD_CODE_SNIPPET>
         <CODE_SNIPPET>
-          /* Recommended */
+          /* 推荐 */
           .test {
             display: block;
             height: 100px;
@@ -906,79 +913,86 @@
         </CODE_SNIPPET>
       </BODY>
     </STYLEPOINT>
-    <STYLEPOINT title="Property Name Stops">
+    <STYLEPOINT title="属性名的结束">
       <SUMMARY>
         Use a space after a property name’s colon.
+        在属性名的冒号后增加一个空格。
       </SUMMARY>
       <BODY>
         <p>
           Always use a single space between property and value (but no
           space between property and colon) for consistency reasons.
+          为了保持一致性，始终在属性和值中间使用一个空格（但在属性和冒号之间不要输入空格）。
         </p>
         <BAD_CODE_SNIPPET>
-          /* Not recommended */
+          /* 不推荐 */
           h3 {
             font-weight:bold;
           }
         </BAD_CODE_SNIPPET>
         <CODE_SNIPPET>
-          /* Recommended */
+          /* 推荐 */
           h3 {
             font-weight: bold;
           }
         </CODE_SNIPPET>
       </BODY>
     </STYLEPOINT>
-    <STYLEPOINT title="Declaration Block Separation">
+    <STYLEPOINT title="声明块的分隔">
       <SUMMARY>
         Use a space between the last selector and the declaration block.
+        在最后一个选择器和声明块之间使用一个空格。
       </SUMMARY>
       <BODY>
         <p>
           Always use a single space between the last selector and the opening
           brace that begins the <a href="http://www.w3.org/TR/CSS21/syndata.html#rule-sets">declaration
           block</a>.
+          始终在最后一个选择器和<a href="http://www.w3.org/TR/CSS21/syndata.html#rule-sets">声明块</a>开始的左大括号之前使用一个空格。
         </p>
         <p>
           The opening brace should be on the same line as the last selector in a
           given rule.
+          在一个特定的规则中，左大括号应该和最后一个选择器位于同一行。
         </p>
         <BAD_CODE_SNIPPET>
-          /* Not recommended: missing space */
+          /* 不推荐：缺少空格 */
           #video{
             margin-top: 1em;
           }
 
-          /* Not recommended: unnecessary line break */
+          /* 不推荐：不必要的换行 */
           #video
           {
             margin-top: 1em;
           }
         </BAD_CODE_SNIPPET>
         <CODE_SNIPPET>
-          /* Recommended */
+          /* 推荐 */
           #video {
             margin-top: 1em;
           }
         </CODE_SNIPPET>
       </BODY>
     </STYLEPOINT>
-    <STYLEPOINT title="Selector and Declaration Separation">
+    <STYLEPOINT title="选择器与声明的分隔">
       <SUMMARY>
         Separate selectors and declarations by new lines.
+        选择器与声明之间使用换行来分隔。
       </SUMMARY>
       <BODY>
         <p>
           Always start a new line for each selector and declaration.
+          每个选择器或者声明总是应该另起一行。
         </p>
         <BAD_CODE_SNIPPET>
-          /* Not recommended */
+          /* 不推荐 */
           a:focus, a:active {
             position: relative; top: 1px;
           }
         </BAD_CODE_SNIPPET>
         <CODE_SNIPPET>
-          /* Recommended */
+          /* 推荐 */
           h1,
           h2,
           h3 {
@@ -988,13 +1002,15 @@
         </CODE_SNIPPET>
       </BODY>
     </STYLEPOINT>
-    <STYLEPOINT title="Rule Separation">
+    <STYLEPOINT title="规则的分隔">
       <SUMMARY>
         Separate rules by new lines.
+        每条规则按行分隔。
       </SUMMARY>
       <BODY>
         <p>
           Always put a blank line (two line breaks) between rules.
+          始终在规则之间插入一个空行（两个换行符）。
         </p>
         <CODE_SNIPPET>
           html {
@@ -1008,23 +1024,28 @@
         </CODE_SNIPPET>
       </BODY>
     </STYLEPOINT>
-    <STYLEPOINT title="CSS Quotation Marks">
+    <STYLEPOINT title="CSS引号">
       <SUMMARY>
         Use single quotation marks for attribute selectors and property values.
+        在属性选择器和属性值上使用单引号。
       </SUMMARY>
       <BODY>
         <p>
           Use single (<code>''</code>) rather than double (<code>""</code>)
           quotation marks for attribute selectors or property values. Do not
           use quotation marks in URI values (<code>url()</code>).
+          在属性选择器或者属性值上使用单引号（<code>''</code>）而不是双引号（<code>""</code>）。
+          在URI值（<code>url()</code>）上不要使用引号。
         </p>
         <p>
           Exception: If you do need to use the <code>@charset</code> rule,
           use double quotation marks—<a href="http://www.w3.org/TR/CSS21/syndata.html#charset">single
           quotation marks are not permitted</a>.
+          例外：如果你使用<code>@charset</code>规则，那么使用双引号——
+          <a href="http://www.w3.org/TR/CSS21/syndata.html#charset">单引号不合法</a>。
         </p>
         <BAD_CODE_SNIPPET>
-          /* Not recommended */
+          /* 不推荐 */
           @import url("//www.google.com/css/maia.css");
 
           html {
@@ -1032,7 +1053,7 @@
           }
         </BAD_CODE_SNIPPET>
         <CODE_SNIPPET>
-          /* Recommended */
+          /* 推荐 */
           @import url(//www.google.com/css/maia.css);
 
           html {
@@ -1043,16 +1064,18 @@
     </STYLEPOINT>
   </CATEGORY>
 
-  <CATEGORY title="CSS Meta Rules">
+  <CATEGORY title="CSS元规则">
     
-    <STYLEPOINT title="Section Comments">
+    <STYLEPOINT title="段落注释">
       <SUMMARY>
         Group sections by a section comment (optional).
+        以段落注释来组织一个段落（可选）。
       </SUMMARY>
       <BODY>
         <p>
           If possible, group style sheet sections together by using
           comments. Separate sections with new lines.
+          如果可以的话，使用注释来把样式表段落组织到一起。以新行来分隔段落。
         </p>
         <CODE_SNIPPET>
           /* Header */
@@ -1075,7 +1098,7 @@
 
   <PARTING_WORDS>
     <p>
-      <em>Be consistent.</em>
+      <em>保持一致。</em>
     </p>
     <p>
       If you’re editing code, take a few minutes to look at the code
@@ -1083,6 +1106,9 @@
       all their arithmetic operators, you should too. If their
       comments have little boxes of hash marks around them, make your
       comments have little boxes of hash marks around them too.
+      如果你正在编写代码，花上几分钟来浏览一下前后的代码，并判断出代码风格。
+      如果原有代码在所有算术运算符的两侧加上空格，那么你也应该这么做。
+      如果原有注释是由#号构成的小方框包围的，那么你也应该为自己的注释加上方框。
     </p>
     <p>
       The point of having style guidelines is to have a common vocabulary
@@ -1092,6 +1118,10 @@
       code you add to a file looks drastically different from the existing
       code around it, it throws readers out of their rhythm when they go to
       read it. Avoid this.
+      样式指南存在的意义在于形成一个通用的编程词汇表，这样人们可以专注于你在表达什么，而不是你如何表达。
+      我们在此奉上全球化的样式规则，以便于人们都能了解这个词汇表，但是局部样式也同样重要。
+      如果你往文件里面添加的代码看起来和原有代码风格截然不同，这就使得读者在阅读代码的时候无法融入代码的韵律。
+      避免这个情况的发生吧。
     </p>
   </PARTING_WORDS>
 
